@@ -1,0 +1,7 @@
+@extends('layouts.main')
+
+@section('content')
+     <div class="container">
+        <h1>HOMEPAGE</h1>
+    </div>
+@endsection
