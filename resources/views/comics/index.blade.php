@@ -17,13 +17,13 @@
             <tbody>
                 @foreach ($comics as $comic)
                     <tr>
-                        <td><img src="{{ $comic->thumb }}" alt=""></td>
+                        <td><img src="{{ $comic->thumb }}" alt="{{ $comic->title }}"></td>
                         <td>{{ $comic->title }}</td>
                         <td>{{ $comic->description }}</td>
                         <td>{{ $comic->price }}$</td>
                         <td><a href="{{ route('comics.show', $comic->id) }}"
                             class="btn btn-success">Show</a></td>
-                        <td><a href="{{ route('comics.show', $comic->id) }}"
+                        <td><a href="{{ route('comics.edit', $comic->id) }}"
                             class="btn btn-warning">Edit</a></td>
                         <td><a href="{{ route('comics.destroy', $comic->id) }}"
                             class="btn btn-danger">Delete</a></td>

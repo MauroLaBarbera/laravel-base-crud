@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-     <div class="container">
-        <h1>HOMEPAGE</h1>
-    </div>
+
+         <img class="vw-100" src="https://borgdotcom.files.wordpress.com/2011/08/dc-new-52-poster.jpg" alt="">
+        
 @endsection
