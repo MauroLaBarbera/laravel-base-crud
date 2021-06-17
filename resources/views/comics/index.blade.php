@@ -1,13 +1,13 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="container">
-        <h1>OUR COMICS</h1>
+    <div class="container mt-5">
+        <h1 class="mb-5 text-center">OUR COMICS</h1>
 
         <table class="table">
             <thead>
                 <tr>
-                    <th>Foto</th>
+                    <th>Cover</th>
                     <th>Title</th>
                     <th>Descriptions</th>
                     <th>Price</th>
@@ -21,12 +21,23 @@
                         <td>{{ $comic->title }}</td>
                         <td>{{ $comic->description }}</td>
                         <td>{{ $comic->price }}$</td>
-                        <td>Show</td>
-                        <td>Edit</td>
-                        <td>Delete</td>
+                        <td><a href="{{ route('comics.show', $comic->id) }}"
+                            class="btn btn-success">Show</a></td>
+                        <td><a href="{{ route('comics.show', $comic->id) }}"
+                            class="btn btn-warning">Edit</a></td>
+                        <td><a href="{{ route('comics.destroy', $comic->id) }}"
+                            class="btn btn-danger">Delete</a></td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
+
+    <div class="pagination justify-content-center">
+     {{ $comics->links()}}
+    </div>
+
+        {{-- <div class="col align-self-center">
+            {{ $comics->links()}}
+        </div> --}}
     </div>
 @endsection
